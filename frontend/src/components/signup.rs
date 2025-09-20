@@ -1,9 +1,7 @@
 use leptos::*;
-use leptos_router::*;
 use leptos::prelude::*;
-use crate::utils::user_types::{CheckPayload,SignupPayload};
+use crate::utils::user_types::CheckPayload;
 use crate::helper_functions::form_checker::form_checker;
-use web_sys::console;
 use leptos::ev::SubmitEvent;
 use wasm_bindgen_futures::spawn_local;
 use leptos::logging::log;

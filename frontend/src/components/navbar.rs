@@ -3,7 +3,6 @@ use leptos_router::*;
 use leptos::prelude::*;
 use leptos_router::hooks::*;
 use crate::components::dropdown::Dropdown;
-use crate::components::login::Login;
 #[component]
 pub fn NavBar() -> impl IntoView {
     let navigate_home = use_navigate();

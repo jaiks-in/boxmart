@@ -1,5 +1,5 @@
 use leptos::*;
-use leptos::prelude::{ElementChild,ClassAttribute,OnAttribute};
+use leptos::prelude::{ElementChild,ClassAttribute};
 
 #[component]
 pub fn ContactPage() ->impl IntoView{

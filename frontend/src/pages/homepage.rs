@@ -1,7 +1,5 @@
-use std::thread::spawn;
 use leptos::*;
 use leptos::prelude::*; 
-use std::time::Duration;
 use leptos::prelude::signal;
 
 
