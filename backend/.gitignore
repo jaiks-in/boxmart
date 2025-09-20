@@ -1,0 +1,18 @@
+Rust build artifacts
+
+target/
+Common OS and editor files
+
+.DS_Store
+.env
+.env.local
+.vscode/
+.idea/
+.history/
+Rust-specific
+Don't check-in cargo's target directory
+
+**/target/
+**/Cargo.lock
+**/Cargo.toml.orig
+*.rs.bk

@@ -1,0 +1,31 @@
+Rust build artifacts
+
+target/
+WASM build output (common for Leptos)
+
+pkg/
+dist/
+/public/pkg
+Common OS and editor files
+
+.DS_Store
+.env
+.env.local
+.vscode/
+.idea/
+.history/
+IDE/Editor specific files
+
+*.code-workspace
+.cproject
+.settings/
+.classpath
+.project
+.vscode/
+Rust-specific
+Don't check-in cargo's target directory
+
+**/target/
+**/Cargo.lock
+**/Cargo.toml.orig
+*.rs.bk
