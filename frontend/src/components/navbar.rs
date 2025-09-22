@@ -8,6 +8,7 @@ pub fn NavBar() -> impl IntoView {
     let navigate_home = use_navigate();
     let navigate_contacts=use_navigate();
     let navigate_login=use_navigate();
+    let navigate_products=use_navigate();
     let (is_logged_in, set_is_logged_in) = create_signal(false);
     
     let handle_login = move |_| {
@@ -26,6 +27,9 @@ pub fn NavBar() -> impl IntoView {
         println!("get_all_contact_details");
         navigate_contacts("/contacts", NavigateOptions::default());
     };
+    let render_products_page=move|_|{
+        navigate_products("/products", NavigateOptions::default());
+    };
 
     view! {
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -40,7 +44,7 @@ pub fn NavBar() -> impl IntoView {
                             <a class="nav-link" on:click=render_home_page style="cursor: pointer;">"Home"</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="cursor: pointer;">"Products"</a>
+                            <a class="nav-link" on:click=render_products_page style="cursor: pointer;">"Products"</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" on:click=render_contact_details style="cursor: pointer;">"Contact"</a>

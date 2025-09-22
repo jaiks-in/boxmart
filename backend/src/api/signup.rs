@@ -4,7 +4,7 @@ use axum::{
 };
 use sqlx::PgPool;
 use bcrypt::{hash, DEFAULT_COST};
-use crate::models::{SignupRequest, UserResponse};
+use crate::models::user_types::{SignupRequest, UserResponse};
 use axum::http::StatusCode;
 
 pub async fn signup(

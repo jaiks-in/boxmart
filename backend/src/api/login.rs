@@ -5,7 +5,7 @@ use axum::{
 use sqlx::PgPool;
 use bcrypt::verify;
 use serde_json::json;
-use crate::models::{LoginPayload, User};
+use crate::models::user_types::{LoginPayload, User};
 
 pub async fn login(
     State(pool): State<PgPool>,
