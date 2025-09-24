@@ -1,14 +1,19 @@
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 use chrono::{DateTime,Utc};
-#[derive(Debug, Deserialize)]
+
+#[derive(Debug, Serialize, Deserialize)]
 pub struct SignupRequest {
     pub username: String,
     pub email: String,
     pub password: String,
-    pub user_type:Option<String>,
-    pub org_name:Option<String>,
+    pub phone_number: Option<String>,
+    pub address: Option<String>,
+    pub secondary_email: Option<String>,
+    pub office_name: Option<String>,
+    pub image_url: Option<String>,
 }
+
 
 // src/models/user.rs
 #[derive(Debug, Serialize)]
@@ -45,3 +50,4 @@ pub struct User {
     pub created_at: DateTime<Utc>,
     pub updated_at: DateTime<Utc>,
 }
+
